@@ -79,4 +79,6 @@ export interface DatabaseAdapter {
 
   // Removes key from local storage
   removeLocal(key: string, callback: ResultCallback<void>): void;
+
+  loadOrSaveDb(filePath: string, isSave: boolean, callback: ResultCallback<void>): void;
 }
