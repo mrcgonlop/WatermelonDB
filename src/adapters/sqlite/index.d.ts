@@ -93,6 +93,8 @@ export default class SQLiteAdapter implements DatabaseAdapter {
 
   removeLocal(key: string, callback: ResultCallback<void>): void
 
+  loadOrSaveDb(filePath: string, isSave: Boolean): Promise<void>
+
   _encodedSchema(): SQL
 
   _migrationSteps(fromVersion: SchemaVersion): MigrationStep[] | undefined
